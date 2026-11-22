@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0e0e10">
+  <title>Art Sizes</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header id="top">
+    <div id="ptext">Loading…</div>
+  </header>
+
+  <main>
+    <section id="v-list" class="view">
+      <div class="sticky">
+        <button class="btn primary wide" style="margin-top:0" data-a="add">📷 Add a painting</button>
+        <div id="backupnag"></div>
+        <div class="searchrow">
+          <input id="q" type="search" placeholder="Search names…" autocomplete="off" autocorrect="off" spellcheck="false">
+          <select id="sort" class="iconbtn sortsel" aria-label="Sort">
+            <option value="new">Newest</option>
+            <option value="name">A–Z</option>
+            <option value="size">Biggest</option>
+          </select>
+        </div>
+      </div>
+      <ul id="list" class="list"></ul>
+      <div id="empty" class="pad muted"></div>
+    </section>
+
+    <section id="v-more" class="view" hidden></section>
+  </main>
+
+  <nav id="tabs">
+    <button data-tab="list" class="on"><span class="ico">🖼️</span>Paintings</button>
+    <button data-tab="more"><span class="ico">⚙️</span>Export &amp; backup</button>
+  </nav>
+
+  <div id="toast" hidden></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
